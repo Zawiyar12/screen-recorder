@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000; /* Black background */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.9); /* Dark background with transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid transparent; /* Transparent border for the rainbow outline */
+    animation: rainbow-outline 5s linear infinite; /* Rainbow animation */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 0, 0, 0.7); /* Glow effect */
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    border: 5px solid transparent; /* Transparent border for the rainbow outline */
+    border-radius: 8px;
+    animation: rainbow-outline 5s linear infinite; /* Rainbow animation */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 0, 0, 0.7); /* Glow effect */
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #e74c3c; /* Bright red buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover and press */
+    border: 5px solid transparent; /* Transparent border for the rainbow outline */
+    animation: rainbow-outline 5s linear infinite; /* Rainbow animation */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 0, 0, 0.7); /* Glow effect */
+}
+
+button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px); /* Button hover effect */
+}
+
+button:disabled {
+    background-color: #7f8c8d; /* Grey for disabled state */
+}
+
+.hidden {
+    display: none;
+}
+
+#recordingIndicator {
+    color: #e74c3c; /* Bright red for recording indicator */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#recordingTime {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+@keyframes rainbow-outline {
+    0% {
+        border-color: red;
+    }
+    14% {
+        border-color: orange;
+    }
+    28% {
+        border-color: yellow;
+    }
+    42% {
+        border-color: green;
+    }
+    56% {
+        border-color: blue;
+    }
+    70% {
+        border-color: indigo;
+    }
+    84% {
+        border-color: violet;
+    }
+    100% {
+        border-color: red; /* Back to the beginning */
+    }
+}
